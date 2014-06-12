@@ -337,8 +337,10 @@ function getListOfRecords(obj, sModule, iId,sParentTab)
 									<td width=22% valign=top style="padding:10px;">
 										<!-- right side InventoryActions -->
 										{include file="Inventory/InventoryActions.tpl"}
-
 										<br>
+                    {if $MODULE eq 'Products'}
+                    {include file="dropzone.tpl"}
+                    {/if}
 										<!-- To display the Tag Clouds -->
 										<div>
 										      {include file="TagCloudDisplay.tpl"}

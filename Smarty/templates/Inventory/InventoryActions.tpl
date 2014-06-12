@@ -305,4 +305,6 @@ function sendpdf_submit()
 </script>
 {/literal}
 
+{else}
+</table>
 {/if}
