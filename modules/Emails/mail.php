@@ -23,7 +23,7 @@ require_once 'include/utils/CommonUtils.php';
   *   $attachment	-- whether we want to attach the currently selected file or all files.[values = current,all] - optional
   *   $emailid		-- id of the email object which will be used to get the vtiger_attachments
   */
-function send_mail($module,$to_email,$from_name,$from_email,$subject,$contents,$cc='',$bcc='',$attachment='',$emailid='',$logo='')
+function send_mail($module,$to_email,$from_name,$from_email,$subject,$contents,$cc='',$bcc='',$attachment='',$emailid='',$logo='',$receipt='')
 {
 
 	global $adb, $log;
@@ -70,7 +70,9 @@ function send_mail($module,$to_email,$from_name,$from_email,$subject,$contents,$
 	if(!empty($replyToEmail)) {
 		$mail->AddReplyTo($replyToEmail);
 	}
-	$mail->ConfirmReadingTo = $mail->From;  //MSL
+	if (!empty($receipt)) {
+		$mail->ConfirmReadingTo = $mail->From; 
+	}
 
 	// vtmailscanner customization: If Support Reply to is defined use it.
 	global $HELPDESK_SUPPORT_EMAIL_REPLY_ID;

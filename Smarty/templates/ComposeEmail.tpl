@@ -98,7 +98,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	{/if}
-   <td valign="top" class="cellLabel" rowspan="4"><div id="attach_cont" class="addEventInnerBox" style="overflow:auto;height:100px;width:100%;position:relative;left:0px;top:0px;"></div>
+   <td valign="top" class="cellLabel" rowspan="5s"><div id="attach_cont" class="addEventInnerBox" style="overflow:auto;height:100px;width:100%;position:relative;left:0px;top:0px;"></div>
    	</tr>
    {if 'bccmail'|@emails_checkFieldVisiblityPermission:'readwrite' eq '0'}   
    	<tr>
@@ -160,6 +160,12 @@
 		{$elements.3.0}
 	</td>
    </tr>
+   <tr>
+	<td class="mailSubHeader" style="padding: 5px;" align="right" nowrap>Read Receipt :</td>
+	<td class="cellText" style="padding: 5px;">
+	<input type=checkbox name="receipt" id="receipt">
+	</td>	
+	</tr>
    <tr>
 	<td colspan="3" class="mailSubHeader" style="padding: 5px;" align="center">
 		 <input title="{$APP.LBL_SELECTEMAILTEMPLATE_BUTTON_TITLE}" accessKey="{$APP.LBL_SELECTEMAILTEMPLATE_BUTTON_KEY}" class="crmbutton small edit" onclick="window.open('index.php?module=Users&action=lookupemailtemplates','emailtemplate','top=100,left=200,height=400,width=500,resizable=yes,scrollbars=yes,menubar=no,addressbar=no,status=yes')" type="button" name="button" value=" {$APP.LBL_SELECTEMAILTEMPLATE_BUTTON_LABEL}  ">
