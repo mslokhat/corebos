@@ -98,7 +98,7 @@
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	{/if}
-   <td valign="top" class="cellLabel" rowspan="5s"><div id="attach_cont" class="addEventInnerBox" style="overflow:auto;height:100px;width:100%;position:relative;left:0px;top:0px;"></div>
+   <td valign="top" class="cellLabel" rowspan="5"><div id="attach_cont" class="addEventInnerBox" style="overflow:auto;height:100px;width:100%;position:relative;left:0px;top:0px;"></div>
    	</tr>
    {if 'bccmail'|@emails_checkFieldVisiblityPermission:'readwrite' eq '0'}   
    	<tr>
