@@ -337,10 +337,7 @@ $app_strings = array (
 'COMBO_USERS' => 'Users',
 'COMBO_CAMPAIGNS' => 'Campaigns',
 'COMBO_VENDORS' => 'Vendors', //MSL
-<<<<<<< HEAD
 'LBL_VENDOR_NAME' => 'Vendor Name', //MSL
-=======
->>>>>>> joebordes/pr_30
 'LBL_SELECT' => 'Select',
 'LBL_EDIT' => 'Edit',
 'LBL_DELETE' => 'Delete',

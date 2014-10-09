@@ -3156,11 +3156,7 @@ function getRelatedTo($module, $list_result, $rset) {
 		$parent_result = $adb->pquery($parent_query, array($parent_id));
 		$parent_name = getFullNameFromQResult($parent_result, 0, "Contacts");
 	}
-<<<<<<< HEAD
-	if ($parent_module == 'Vendors' && ($module == 'Emails'|| $module == 'Calendar')) {  //MSL
-=======
-	if ($parent_module == 'Vendors' && ($module == 'Emails'|| $module == 'Calendar')) {
->>>>>>> joebordes/pr_30
+	if ($parent_module == 'Vendors' && ($module == 'Emails' || $module == 'Calendar')) {
 		$parent_query = "SELECT vendorname FROM vtiger_vendor WHERE vendorid=?";
 		$parent_result = $adb->pquery($parent_query, array($parent_id));
 		$parent_name = $adb->query_result($parent_result, 0, "vendorname");

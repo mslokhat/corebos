@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> joebordes/pr_30
 <?php
 class addVendorActivities extends cbupdaterWorker {
 	function applyChange() {
@@ -21,27 +17,13 @@ class addVendorActivities extends cbupdaterWorker {
 			$relationLabel = 'Activities History';
 			$module->setRelatedList($qtModule , $relationLabel, Array("ADD"),'get_history');
 			
-<<<<<<< HEAD
-			
 			$this->sendMsg('Changeset '.get_class($this).' applied!');
 			$this->markApplied();
-			
-=======
-			$this->sendMsg('Changeset '.get_class($this).' applied!');
-			$this->markApplied();
->>>>>>> joebordes/pr_30
 		}
 		$this->finishExecution();
 	}
 	
 	function undoChange() {
-<<<<<<< HEAD
-	
-	}
-}
-
-?>
-=======
 		if ($this->isBlocked()) return true;
 		if ($this->hasError()) $this->sendError();
 		if ($this->isSystemUpdate()) {
@@ -70,4 +52,3 @@ class addVendorActivities extends cbupdaterWorker {
 }
 
 ?>
->>>>>>> joebordes/pr_30
